@@ -153,7 +153,7 @@ function renderEditor(){
   </div>
   <div class="task-grid">
    <div class="field task-name-field"><label>Nome da tarefa</label><input data-i="${i}" data-k="name" value="${esc(t.name||"NOVA TAREFA")}"></div>
-   <div class="field Laboratory"><label>Recursos</label><input data-i="${i}" data-k="Laboratory" value="${esc(t.Laboratory)}"></div>
+   <div class="field Laboratory"><label>Laboratório</label><input data-i="${i}" data-k="Laboratory" value="${esc(t.Laboratory)}"></div>
    <div class="field responsible"><label>Responsável</label><input data-i="${i}" data-k="responsible" value="${esc(t.responsible)}"></div>
    <div class="field duration"><label>Duração (horas)</label><select data-i="${i}" data-k="duration">
      ${Array.from({length:24},(_,j)=>j+1).map(n=>`<option value="${n}" ${+t.duration===n?"selected":""}>${n}h</option>`).join("")}
@@ -186,7 +186,7 @@ function renderGantt(){
  const date=(state.validDate||"").split("-").reverse().join("/");
  let h=`
  <div class="table-head">
-   <div class="head-cell">Tarefa</div><div class="head-cell">Recursos</div><div class="head-cell">Responsável</div><div class="head-cell">Status</div>
+   <div class="head-cell">Tarefa</div><div class="head-cell">Laborátorio</div><div class="head-cell">Responsável</div><div class="head-cell">Status</div>
    <div class="dates">${weeks.map(w=>`<div class="date-block"><div class="date-label">${w}</div><div class="hour-row">${[1,2,3,4,5,6].map(h=>`<span>${h}h</span>`).join("")}</div></div>`).join("")}</div>
  </div>`;
  state.tasks.forEach((t,i)=>{
