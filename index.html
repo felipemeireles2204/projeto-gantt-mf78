@@ -186,7 +186,7 @@ function renderGantt(){
  const date=(state.validDate||"").split("-").reverse().join("/");
  let h=`
  <div class="table-head">
-   <div class="head-cell">Tarefa</div><div class="head-cell">Laborátorio</div><div class="head-cell">Responsável</div><div class="head-cell">Status</div>
+   <div class="head-cell">Tarefa</div><div class="head-cell">Laboratório</div><div class="head-cell">Responsável</div><div class="head-cell">Status</div>
    <div class="dates">${weeks.map(w=>`<div class="date-block"><div class="date-label">${w}</div><div class="hour-row">${[1,2,3,4,5,6].map(h=>`<span>${h}h</span>`).join("")}</div></div>`).join("")}</div>
  </div>`;
  state.tasks.forEach((t,i)=>{
